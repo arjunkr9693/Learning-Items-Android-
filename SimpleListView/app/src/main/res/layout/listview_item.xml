@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="108dp"
+    android:background="@drawable/item_back"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView1"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/img1"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:civ_border_width="5dp"
+        app:civ_border_color="#FF000000"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="18dp" />
+
+    <RelativeLayout
+        android:id="@+id/detailContainer"
+        android:layout_width="240dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="-30dp"
+        android:layout_marginTop="-15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toEndOf="@+id/imageView1"
+        app:layout_constraintTop_toTopOf="@+id/imageView1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/lastMessageTimeTextView"
+            android:layout_alignBottom="@+id/lastMessageTimeTextView"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="-8dp"
+            android:text="Arjun Sahoo"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/lastMessageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTextView"
+            android:layout_marginTop="10dp"
+            android:text="Last Message" />
+
+        <TextView
+            android:id="@+id/lastMessageTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="14dp"
+            android:gravity="end"
+            android:text="11:45 AM" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
