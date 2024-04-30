@@ -9,7 +9,7 @@ import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    private val songs = arrayOf("Song 1", "Song 2", "Song 3", "Another Song")
+    private val songs = arrayOf("Song 1", "Song 2", "Song 3", "Another Song", "Song 2", "Song 3", "Another Song", "Song 2", "Song 3", "Another Song", "Song 2", "Song 3", "Another Song")
     private lateinit var adapter: ArrayAdapter<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
